@@ -16,6 +16,10 @@ body {
   padding: 0;
 }
 
+main {
+  min-height: 100%;
+}
+
 .container {
   width: 100%;
   margin: 0px auto;
@@ -105,6 +109,38 @@ body {
 .table-info th {
   background-color: #f5f5f5;
   font-weight: bold;
+}
+
+#top-menu-table {
+  min-width: 300px;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.menu-functions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-functions > button {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu-functions > button:hover {
+  color: #007bff;
+}
+
+.menu-functions > button > i {
+  font-size: 1.5rem;
+}
+
+.saveBtn {
+  margin-right: 16px;
 }
 
 #myFooter {
