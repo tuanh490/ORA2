@@ -1,7 +1,132 @@
 let pages = localStorage.getItem('pages')
 
 if (!pages) {
-    pages = ['Trang chủ', 'Thông tin môn học', 'Các công nghệ web', 'Thông tin sinh viên'];
+    pages = [
+        {
+            name: 'Trang chủ',
+            id: crypto.randomUUID(),
+            contents: [
+                {
+                    name: 'Thông tin khai giảng',
+                    id: crypto.randomUUID(),
+                    html: '<div></div>'
+                },
+                {
+                    name: 'Thông tin seminar',
+                    id: crypto.randomUUID(),
+                    html: '<div></div>'
+                },
+                {
+                    name: 'Thông tin công ty quan tâm',
+                    id: crypto.randomUUID(),
+                    html: '<div></div>'
+                },
+            ]
+        },
+        {
+            name: 'Thông tin môn học',
+            id: crypto.randomUUID(),
+            contents: [
+                {
+                    name: 'Mô tả tóm tắt học phần (tiếng Việt) (*)',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: 'Mô tả tóm tắt học phần (tiếng Anh) (*)',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: 'Nội dung tóm tắt học phần (tiếng Việt) (*)',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '>Nội dung tóm tắt học phần (tiếng Anh) (*)',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: 'Sách tham khảo',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+            ]
+        },
+        {
+            name: 'Các công nghệ web',
+            id: crypto.randomUUID(),
+            contents: [
+                {
+                    name: '1. Frontend (Giao diện người dùng)',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '2. Backend (Máy chủ và xử lý dữ liệu)',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '3. Cơ sở dữ liệu',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '4. API và Tích hợp dịch vụ',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '5. DevOps và Triển khai',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '6. Bảo mật',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '7. Testing và Debugging',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '8. Performance Optimization',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: '9. User Authentication & Authorization',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+            ]
+        },
+        {
+            name: 'Thông tin sinh viên',
+            id: crypto.randomUUID(),
+            contents: [
+                {
+                    name: 'Kĩ năng',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: 'Dự án',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+                {
+                    name: 'Sở thích',
+                    id: crypto.randomUUID(),
+                    html: ''
+                },
+            ]
+        }
+    ];
 
     localStorage.setItem('pages', JSON.stringify(pages))
 } else {
@@ -10,12 +135,14 @@ if (!pages) {
 
 console.log(pages)
 
-updatePages()
-
 function addPage(index) {
-    pages.splice(Number(index) + 1, 0, 'Trang mới')
+    pages.splice(Number(index) + 1, 0, {
+        name: 'Trang mới',
+        id: crypto.randomUUID()
+    })
     localStorage.setItem('pages', JSON.stringify(pages))
     updatePages()
+    editPage(Number(index) + 1)
 }
 
 function removePage(index) {
@@ -24,11 +151,24 @@ function removePage(index) {
     updatePages()
 }
 
-function editPage(indexStr) {
+function editPage(index) {
+    const i = Number(index)
+    editRow(index, pages[i].name,
+        (v) => {
+            if (v) {
+                pages[i].name = v;
+                localStorage.setItem('pages', JSON.stringify(pages));
+                updatePages();
+            }
+        },
+        updatePages
+    )
+}
+
+function editRow(indexStr, oldName, saveBtnFunction, cancelBtnFunction) {
     const i = Number(indexStr);
-    const topTable = document.getElementById('top-menu-table');
-    const pageSection = topTable.children[i];
-    const oldName = pages[i];
+    const menuTable = document.getElementById('menu-table');
+    const pageSection = menuTable.children[i];
 
     // clear and rebuild the row
     pageSection.innerHTML = '';
@@ -45,19 +185,12 @@ function editPage(indexStr) {
     const saveBtn = document.createElement('button');
     saveBtn.innerText = 'Lưu';
     saveBtn.className = 'text-xl w-1/2 border-solid border-1 border-gray-300 px-2 rounded cursor-pointer hover:text-green-600 saveBtn';
-    saveBtn.onclick = () => {
-        const v = input.value.trim();
-        if (v) {
-            pages[i] = v;
-            localStorage.setItem('pages', JSON.stringify(pages));
-            updatePages();
-        }
-    };
+    saveBtn.onclick = () => saveBtnFunction(input.value.trim())
 
     const cancelBtn = document.createElement('button');
     cancelBtn.innerText = 'Hủy';
     cancelBtn.className = 'text-xl w-1/2 border-solid border-1 border-gray-300 px-2 rounded cursor-pointer hover:text-red-600';
-    cancelBtn.onclick = () => updatePages();
+    cancelBtn.onclick = () => cancelBtnFunction();
 
     nameCell.append(input)
     const btnCell = document.createElement('div');
@@ -69,25 +202,171 @@ function editPage(indexStr) {
     input.focus();
 }
 
+function showPage(index) {
+    const page = pages[Number(index)]
+    const contentContainer = document.getElementById('content-container')
 
+    const sidebar = document.getElementById("mySidebar");
+    sidebar.innerHTML = `
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    `
+
+    // Tạo link tới các content trong page
+    const title = document.createElement('h4')
+    title.classList = 'w3-bar-item'
+    const bold = document.createElement('b')
+    bold.innerText = page.name
+    title.appendChild(bold)
+    sidebar.append(title)
+
+    page.contents.forEach(content => {
+        const anchor = createSidebarElement(content.name, content.id)
+        sidebar.appendChild(anchor);
+    })
+
+    createSidebarMenuTable(page.contents, index)
+}
+
+function showContentLayout(contentIndex, pageIndex) {
+
+}
+
+function addContent(contentIndex, pageIndex) {
+    pages[Number(pageIndex)].contents.splice(Number(contentIndex) + 1, 0, {
+        name: 'Mục mới',
+        id: crypto.randomUUID()
+    })
+    localStorage.setItem('pages', JSON.stringify(pages))
+    showPage(pageIndex)
+    editContentName(contentIndex + 1, pageIndex)
+}
+
+function removeContent(contentIndex, pageIndex) {
+    pages[Number(pageIndex)].contents.splice(Number(contentIndex), 1)
+    localStorage.setItem('pages', JSON.stringify(pages))
+    showPage(pageIndex)
+}
+
+function editContentName(contentIndex, pageIndex) {
+    editRow(contentIndex, pages[Number(pageIndex)].contents[Number(contentIndex)].name,
+        (v) => {
+            if (v) {
+                if (v) {
+                    pages[Number(pageIndex)].contents[Number(contentIndex)].name = v;
+                    localStorage.setItem('pages', JSON.stringify(pages));
+                    showPage(pageIndex);
+                }
+            }
+        },
+        () => {
+            showPage(pageIndex)
+        }
+    )
+}
 
 function updatePages() {
-    const topTable = document.getElementById('top-menu-table')
-    topTable.innerHTML = '';
+    createTopMenuTable(pages)
 
-    for (let i = 0; i < pages.length; i++) {
+    updateTopMenu()
+}
+
+function updateTopMenu() {
+    const topMenu = document.getElementById('top-menu')
+
+    const homePage = document.createElement('a')
+    homePage.href = 'javascript:void(0)'
+    homePage.classList = 'w3-bar-item w3-button'
+    homePage.onclick = () => showContent(pages[0].id)
+    homePage.innerHTML = '<i class="fas fa-home"></i>'
+
+    topMenu.innerHTML = `
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+        href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    `
+    topMenu.appendChild(homePage)
+
+    for (let i = 1; i < pages.length; i++) {
+        const el = createTopMenuAnchor(pages[i].id, pages[i].name)
+
+        topMenu.appendChild(el)
+    }
+
+    const adminPage = createTopMenuAnchor('admin-page', 'Admin Page')
+
+    topMenu.appendChild(adminPage)
+}
+
+// Function to show content and update button style
+function showContent(sectionId) {
+    const contentContainer = document.getElementById('content-container')
+
+    const sidebar = document.getElementById("mySidebar");
+    sidebar.innerHTML = `
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large" title="Close Menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    `
+    // Tạo link tới các trang cho sidebar
+    for (let i = 1; i < pages.length; ++i) {
         const page = pages[i]
-        const pageSection = document.createElement('div')
-        const pageName = document.createElement('div')
-        const pageButtons = document.createElement('div')
+        const anchor = createSidebarPageLink(page.name, page.id)
+        sidebar.appendChild(anchor)
+    }
 
-        pageSection.classList += 'flex border-solid border-b-2 border-gray-300'
+    // Tạo link tới các content trong page
+    pages.forEach(page => {
+        if (page.id == sectionId) {
+            const title = document.createElement('h4')
+            title.classList = 'w3-bar-item'
+            const bold = document.createElement('b')
+            bold.innerText = page.name
+            title.appendChild(bold)
+            sidebar.append(title)
 
-        pageName.innerText = page
-        pageName.classList += 'w-1/2'
+            page.contents.forEach(content => {
+                const anchor = createSidebarElement(content.name, content.id)
+                sidebar.appendChild(anchor);
+            })
+
+
+            contentContainer.innerHTML = window.home_page // TODO: fix this
+
+
+            return;
+        }
+    });
+
+    if (sectionId == 'admin-page') {
+        contentContainer.innerHTML = window.admin_page
+        updatePages()
+        sidebar.innerHTML += `
+        <h4 class="w3-bar-item"><b>Admin Page</b></h4>
+        `;
+    }
+
+
+    updateTopMenu();
+}
+
+function createTopMenuTable(arr) {
+    const menuTable = document.getElementById('menu-table')
+    menuTable.innerHTML = '';
+
+    for (let i = 0; i < arr.length; i++) {
+        const name = arr[i].name
+        const section = document.createElement('div')
+        const nameRow = document.createElement('div')
+        const rowButtons = document.createElement('div')
+
+        section.classList += 'flex border-solid border-b-2 border-gray-300'
+
+        nameRow.innerText = name
+        nameRow.classList += 'w-1/2'
 
         if (i == 0) {
-            pageButtons.innerHTML = `
+            rowButtons.innerHTML = `
             <div class="menu-functions">
                 <button onclick="showPage('${i}')">
                     <i class="fa-solid fa-eye"></i>
@@ -98,7 +377,7 @@ function updatePages() {
             </div>
             `
         } else {
-            pageButtons.innerHTML = `
+            rowButtons.innerHTML = `
             <div class="menu-functions">
                 <button onclick="showPage('${i}')">
                     <i class="fa-solid fa-eye"></i>
@@ -116,118 +395,86 @@ function updatePages() {
             `
         }
 
-        pageButtons.classList += 'w-1/2'
+        rowButtons.classList += 'w-1/2'
 
-        pageSection.appendChild(pageName)
-        pageSection.appendChild(pageButtons)
-        topTable.appendChild(pageSection)
+        section.appendChild(nameRow)
+        section.appendChild(rowButtons)
+        menuTable.appendChild(section)
     }
 
-    updateTopMenu()
+    return menuTable
 }
 
-function updateTopMenu() {
-    const topMenu = document.getElementById('top-menu')
+function createSidebarMenuTable(arr, pageIndex) {
+    const index = Number(pageIndex)
+    const menuTable = document.getElementById('menu-table')
+    menuTable.innerHTML = '';
 
-    topMenu.innerHTML = `
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
-        href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" onclick="showContent('courseInfo')" class="w3-bar-item w3-button">
-        <i class="fas fa-home"></i>
-    </a>
-    `
+    for (let i = 0; i < arr.length; i++) {
+        const name = arr[i].name
+        const section = document.createElement('div')
+        const nameRow = document.createElement('div')
+        const rowButtons = document.createElement('div')
 
-    for (let i = 1; i < pages.length; i++) {
-        const el = document.createElement('a')
-        el.href = 'javascript:void(0)'
-        el.classList = 'w3-bar-item w3-button w3-hide-small w3-hide-medium'
-        el.innerText = pages[i]
+        section.classList += 'flex border-solid border-b-2 border-gray-300'
 
-        topMenu.appendChild(el)
+        nameRow.innerText = name
+        nameRow.classList += 'w-1/2'
+
+        rowButtons.innerHTML = `
+        <div class="menu-functions">
+            <button onclick="showContentLayout('${i}', '${pageIndex}')">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+            <button onclick="editContentName('${i}', '${pageIndex}')">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button onclick="removeContent('${i}', '${pageIndex}')">
+                <i class="fa-solid fa-remove"></i>
+            </button>
+            <button onclick="addContent('${i}', '${pageIndex}')">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+        `
+
+        rowButtons.classList += 'w-1/2'
+
+        section.appendChild(nameRow)
+        section.appendChild(rowButtons)
+        menuTable.appendChild(section)
     }
 
-    const adminPage = document.createElement('a')
-    adminPage.href = 'javascript:void(0)'
-    adminPage.classList = 'w3-bar-item w3-button w3-hide-small w3-hide-medium'
-    adminPage.onclick = () => showContent('admin-page')
-    adminPage.innerText = 'Admin Page'
-
-    topMenu.appendChild(adminPage)
+    return menuTable
 }
 
-// Function to show content and update button style
-function showContent(sectionId, event) {
-    // Hide all sections
-    const sections = document.querySelectorAll('.w3-container');
-    sections.forEach(section => section.classList.add('hidden'));
+function createSidebarPageLink(innerText, id) {
+    const anchor = document.createElement('a')
+    anchor.classList = 'w3-bar-item w3-button w3-hide-large'
+    anchor.innerText = innerText
+    anchor.href = 'javascript:void(0)'
+    anchor.onclick = () => showContent(id)
+    return anchor
+}
 
-    // Remove active class from all buttons
-    const buttons = document.querySelectorAll('.w3-bar-item');
-    buttons.forEach(button => button.classList.remove('active'));
+function createSidebarElement(innerText, href) {
+    const anchor = document.createElement('a')
+    anchor.classList = 'w3-bar-item w3-button w3-hover-black'
+    anchor.innerText = innerText
+    anchor.href = href
+    return anchor
+}
 
-    // Show selected section
-    document.getElementById(sectionId).classList.remove('hidden');
+function createTopMenuAnchor(contentText, text) {
+    const anchor = document.createElement('a')
+    anchor.href = 'javascript:void(0)'
+    anchor.classList = 'w3-bar-item w3-button w3-hide-small w3-hide-medium'
+    anchor.onclick = () => showContent(contentText)
+    anchor.innerHTML = text
 
-    const sidebar = document.getElementById("mySidebar");
-    sidebar.innerHTML = ``;
-
-    sidebar.innerHTML += `
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hide-large" title="Close Menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <a href="javascript:void(0)" onclick="showContent('info', event)" class="w3-bar-item w3-button w3-hide-large">Thông tin môn học</a>
-    <a href="javascript:void(0)" onclick="showContent('web-tech', event)" class="w3-bar-item w3-button w3-hide-large">Các công nghệ web</a>
-    <a href="javascript:void(0)" onclick="showContent('student-info', event)" class="w3-bar-item w3-button w3-hide-large">Thông tin sinh viên</a>
-  `;
-
-    if (sectionId === 'courseInfo') {
-        sidebar.innerHTML += `
-      <h4 class="w3-bar-item"><b>Menu</b></h4>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#classInfo">Thông tin khai giảng</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#seminar">Thông tin Seminar</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#company">Thông tin công ty quan tâm</a>
-    `;
-    } else if (sectionId === 'info') {
-        sidebar.innerHTML += `
-      <h4 class="w3-bar-item"><b>Thông tin môn học</b></h4>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#summaryVN">Mô tả tóm tắt học phần (tiếng Việt) (*)</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#summaryEN">Mô tả tóm tắt học phần (tiếng Anh) (*)</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#contentVN">Nội dung tóm tắt học phần (tiếng Việt) (*)</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#contentEN">Nội dung tóm tắt học phần (tiếng Anh) (*)</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#reference">Sách tham khảo</a>
-    `;
-    } else if (sectionId === 'web-tech') {
-        sidebar.innerHTML += `
-      <h4 class="w3-bar-item"><b>Công nghệ Web</b></h4>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#frontend">1. Frontend (Giao diện người dùng)</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#backend">2. Backend (Máy chủ và xử lý dữ liệu)</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#database">3. Cơ sở dữ liệu</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#api">4. API và Tích hợp dịch vụ</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#devops">5. DevOps và Triển khai</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#security">6. Bảo mật</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#testing">7. Testing và Debugging</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#optimization">8. Performance Optimization</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#authentication">9. User Authentication & Authorization</a>
-    `;
-    } else if (sectionId === 'student-info') {
-        sidebar.innerHTML += `
-      <h4 class="w3-bar-item"><b>Thông tin sinh viên</b></h4>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#skills-info">Kĩ năng</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#projects-info">Dự án</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="#hobbies-info">Sở thích</a>
-    `;
-    } else if (sectionId === 'admin-page') {
-        sidebar.innerHTML += `
-      <h4 class="w3-bar-item"><b>Admin Page</b></h4>
-    `;
-    }
-
-    // Add active class to clicked button
-    if (event) {
-        event.target.classList.add('active');
-    }
+    return anchor;
 }
 
 window.onload = () => {
-    showContent('courseInfo')
+    showContent(pages[0].id)
 }
