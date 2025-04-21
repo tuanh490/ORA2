@@ -21,8 +21,27 @@ function w3_close() {
   overlayBg.style.display = "none";
 }
 
+function toggleGuide() {
+  const gridGuide = document.getElementById('gridGuide')
+  gridGuide.classList.toggle('hidden')
+}
+
+let pages = localStorage.getItem('pages')
+
+if (!pages) {
+  pages = initialData
+
+  localStorage.setItem('pages', JSON.stringify(pages))
+} else {
+  pages = JSON.parse(pages);
+}
+
+console.log(pages)
 
 
+window.onload = () => {
+  showContent('admin-page')
+}
 
 
 

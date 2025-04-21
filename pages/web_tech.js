@@ -116,5 +116,3 @@ const web_tech = `
         </div>
       </div>
 `
-
-window.web_tech = web_tech

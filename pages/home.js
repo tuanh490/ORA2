@@ -132,5 +132,3 @@ const home = `
     </div>
 </div>
 `
-
-window.home_page = home; 

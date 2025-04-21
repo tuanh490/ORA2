@@ -82,5 +82,3 @@ const student_info = `
         </div>
       </div>
 `
-
-window.student_info = student_info;

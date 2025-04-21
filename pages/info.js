@@ -266,5 +266,3 @@ const info = `
     </div>
 </div >
 `
-
-window.info_page = info
