@@ -38,6 +38,17 @@ if (!pages) {
 
 console.log(pages)
 
+// Initialize quill
+const quill = new Quill('#quillEditor', {
+  theme: 'snow',
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block'],
+    ],
+  }
+});
 
 window.onload = () => {
   showContent('admin-page')

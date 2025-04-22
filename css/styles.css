@@ -175,3 +175,9 @@ main {
   color: #fff !important;
   background-color: #ffb300 !important;
 }
+
+.ql-editor img {
+  max-width: 500px !important;
+  max-height: 500px !important;
+  height: auto;
+}

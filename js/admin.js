@@ -143,7 +143,6 @@ function editContentRow(indexStr, oldName, oldRows, oldCols, saveFn, cancelFn) {
 
 function showPage(index) {
     const page = pages[Number(index)]
-    const contentContainer = document.getElementById('content-container')
 
     const sidebar = document.getElementById("mySidebar");
     sidebar.innerHTML = `
@@ -160,10 +159,15 @@ function showPage(index) {
     title.appendChild(bold)
     sidebar.append(title)
 
-    page.sidebarMenuItems.forEach(item => {
-        const anchor = createSidebarElement(item.name, item.id)
-        sidebar.appendChild(anchor);
-    })
+    if (page.sidebarMenuItems)
+        page.sidebarMenuItems.forEach(item => {
+            const anchor = createSidebarElement(item.name, item.id)
+            sidebar.appendChild(anchor);
+        })
+    else {
+        page.sidebarMenuItems = []
+        localStorage.setItem('pages', JSON.stringify(pages))
+    }
 
     createSidebarMenuTable(page.sidebarMenuItems, index)
 }
@@ -196,6 +200,11 @@ function showContentLayout(itemIndex, pageIndex) {
 
         sidebar.appendChild(anchor);
     })
+
+    if (!currentItem.contents) {
+        currentItem.contents = []
+        localStorage.setItem('pages', JSON.stringify(pages))
+    }
 
     createContentTable(currentItem.contents, itemIndex, pageIndex)
 }
@@ -260,9 +269,43 @@ function editSidebarMenuItemName(itemIndex, pageIndex) {
     )
 }
 
-function displayContent() {
+function displayContent(contentIndex, itemIndex, pageIndex) {
+    const page = pages[Number(pageIndex)];
+    const section = page.sidebarMenuItems[Number(itemIndex)];
+    const currentContent = section.contents[Number(contentIndex)];
+    const adminContainer = document.getElementById('adminContainer');
 
+    resetAdminPage()
+    const menuTable = document.getElementById('menu-table')
+    menuTable.classList.add('hidden')
+
+    const goBackBtn = document.getElementById('goBackBtn')
+    goBackBtn.classList.remove('hidden')
+    goBackBtn.onclick = () => showContentLayout(itemIndex, pageIndex)
+
+    // Title of this content cell
+    const title = document.getElementById('quillTitle')
+    title.innerText = `${page.name}/${section.name}/${currentContent.name}`;
+
+    const quillContainer = document.getElementById('quillContainer')
+    quillContainer.classList.remove('hidden')
+
+    // load any previously saved HTML
+    if (currentContent.html) {
+        quill.root.innerHTML = currentContent.html;
+    }
+
+    // Save button
+    const saveEditorBtn = document.getElementById('saveEditorBtn')
+    saveEditorBtn.onclick = () => {
+        currentContent.html = quill.root.innerHTML;
+        localStorage.setItem('pages', JSON.stringify(pages));
+    };
+
+    // Display Preview
+    renderGridTable(section.name, section.contents, section.totalRows, section.totalCols)
 }
+
 
 function addFirstContent(index, itemIndex, pageIndex) {
     pages[Number(pageIndex)].sidebarMenuItems[Number(itemIndex)].contents.splice(Number(index), 0, {
@@ -365,7 +408,13 @@ function updateTopMenu() {
 
 // Function to show content and update button style
 function showContent(sectionId) {
+    const mainContainer = document.getElementById('mainContainer')
     const contentContainer = document.getElementById('content-container')
+
+    contentContainer.classList.remove('hidden')
+
+    const adminMain = document.getElementById('adminMain')
+    adminMain.classList.add('hidden')
 
     const sidebar = document.getElementById("mySidebar");
     sidebar.innerHTML = `
@@ -395,16 +444,15 @@ function showContent(sectionId) {
                 sidebar.appendChild(anchor);
             })
 
-
-            contentContainer.innerHTML = home_page // TODO: fix this
-
+            mainContainer.innerHTML = generatePageMain(page.id)
 
             return;
         }
     });
 
     if (sectionId == 'admin-page') {
-        contentContainer.innerHTML = admin_page
+        contentContainer.classList.add('hidden')
+        adminMain.classList.remove('hidden')
         updatePages()
         sidebar.innerHTML += `
         <h4 class="w3-bar-item"><b>Admin Page</b></h4>
@@ -416,7 +464,7 @@ function showContent(sectionId) {
 
 function createTopMenuTable(arr) {
     const menuTable = document.getElementById('menu-table')
-    resetTable()
+    resetAdminPage()
 
     for (let i = 0; i < arr.length; i++) {
         const name = arr[i].name
@@ -475,7 +523,7 @@ function createTopMenuTable(arr) {
 function createSidebarMenuTable(arr, pageIndex) {
     const index = Number(pageIndex)
     const menuTable = document.getElementById('menu-table')
-    resetTable()
+    resetAdminPage()
 
     const firstSection = document.createElement('div')
     firstSection.classList += 'flex border-solid border-b-2 border-gray-300'
@@ -538,7 +586,7 @@ function createContentTable(arr, itemIndex, pageIndex) {
     const index = Number(pageIndex)
     const menuTable = document.getElementById('menu-table')
 
-    resetTable()
+    resetAdminPage()
     const gridHelp = document.getElementById('gridHelp')
     gridHelp.classList.remove('hidden')
 
@@ -669,9 +717,10 @@ function createTotalRowColForm(itemIndex, pageIndex) {
     return form
 }
 
-function resetTable() {
+function resetAdminPage() {
     const menuTable = document.getElementById('menu-table')
     menuTable.innerHTML = '';
+    menuTable.classList.remove('hidden')
 
     const form = document.getElementById('totalRowColForm')
     if (form)
@@ -684,6 +733,10 @@ function resetTable() {
     const gridHelp = document.getElementById('gridHelp')
     if (gridHelp)
         gridHelp.classList.add('hidden')
+
+    const quillContainer = document.getElementById('quillContainer')
+    if (quillContainer)
+        quillContainer.classList.add('hidden')
 }
 
 function createSidebarPageLink(innerText, id) {
@@ -699,7 +752,7 @@ function createSidebarElement(innerText, href) {
     const anchor = document.createElement('a')
     anchor.classList = 'w3-bar-item w3-button w3-hover-black'
     anchor.innerText = innerText
-    anchor.href = href
+    anchor.href = `#${href}`
     return anchor
 }
 
@@ -724,14 +777,50 @@ function renderGridTable(name, contents, totalRows, totalCols) {
     container.innerHTML = '';
 
     // Tailwind dynamic class cleanup and apply new grid size
-    container.className = 'grid gap-1 bg-black p-1';
+    container.className = container.className
+        .split(' ')
+        .filter(cls => !cls.startsWith('grid-rows-') && !cls.startsWith('grid-cols-'))
+        .join(' ');
+
     container.classList.add(`grid-rows-${totalRows}`, `grid-cols-${totalCols}`);
 
     contents.forEach(item => {
         const cell = document.createElement('div');
         cell.className = `row-span-${item.rows} col-span-${item.cols} bg-white`;
-        cell.innerText = item.name;
+        cell.innerHTML = item.html ? item.html : item.name
         container.appendChild(cell);
     });
 }
 
+function generatePageMain(pageId) {
+    const page = pages.find(page => page.id === pageId)
+    const main = document.createElement('div')
+
+    page.sidebarMenuItems.forEach(item => {
+        const section = document.createElement('div')
+        section.classList = 'mt-8'
+        section.id = item.id
+
+        const header = document.createElement('div')
+        header.classList = 'section-header rounded-t-xl mb-1'
+        header.style.borderRadius = 0;
+        header.innerText = item.name
+
+        const grid = document.createElement('div')
+        grid.classList = 'grid p-[2px] gap-[2px] bg-black'
+        grid.classList.add(`grid-rows-${item.totalRows}`, `grid-cols-${item.totalCols}`);
+
+        item.contents.forEach(content => {
+            const cell = document.createElement('div');
+            cell.className = `p-2 row-span-${content.rows} col-span-${content.cols} bg-white`;
+            cell.innerHTML = content.html ? content.html : content.name
+            grid.appendChild(cell);
+        })
+
+        section.appendChild(header)
+        section.appendChild(grid)
+        main.appendChild(section)
+    })
+
+    return main.innerHTML
+}

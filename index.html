@@ -5,7 +5,6 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>ORA2</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="./lib/w3.css">
@@ -14,7 +13,8 @@
   <link rel="stylesheet" href="./lib/font-awesome.min.css">
   <link rel="stylesheet" href="./css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
 </head>
 
 <body>
@@ -35,6 +35,71 @@
 
     <!-- Main content -->
     <div id="content-container" class="w3-main" style="margin-left:250px">
+      <div class="w3-container w3-padding-64">
+        <div id="mainContainer" class="container">
+        </div>
+      </div>
+    </div>
+    <div id="adminMain" class="w3-main" style="margin-left:250px">
+      <div id="admin-page" class="w3-container w3-padding-64">
+        <div id="adminContainer" class="container">
+          <div>
+            <div class="header">Admin Page</div>
+            <div class="info-section min-w-[300px] max-w-[800px]">
+              <div class="section-header">Admin Menu</div>
+              <div>
+                <div id="menu-table">
+                </div>
+              </div>
+            </div>
+            <div id="quillContainer" class="hidden">
+              <h4 id="quillTitle" class="text-xl font-semibold mb-2"></h4>
+              <div id="quillEditor" class="mb-4 bg-white">
+              </div>
+              <div class="mt-4">
+                <button id="saveEditorBtn"
+                  class="px-4 py-2 bg-green-500 text-white cursor-pointer rounded hover:bg-green-600">Lưu nội
+                  dung</button>
+              </div>
+            </div>
+            <div class="mt-4">
+              <button id="goBackBtn"
+                class="hidden px-3 py-1 border border-blue-500 rounded hover:bg-blue-50 cursor-pointer hover:text-blue-600">
+                Trở lại
+              </button>
+            </div>
+          </div>
+          <div id="gridHelp" class="mt-4 mb-16 hidden">
+            <button class="cursor-pointer hover:text-sky-500 transition duration-200" onclick="toggleGuide()">
+              <i class="fa-solid fa-circle-info text-3xl"></i>
+            </button>
+            <div id="gridGuide" class="hidden">
+              - Layout sử dụng grid để sắp xếp các mục content.
+              <br />
+              - Dưới bảng là thông số cho mỗi content riêng. Mỗi content sẽ có tổng số hàng và cột tương ứng.
+              <br />
+              - Mỗi mục của một content sẽ có số dòng và cột có thể thay đổi qua <i
+                class="fa-solid fa-pen-to-square"></i>.
+              <br />
+              - Các mục của content lần lượt trong bảng sẽ được hiển thị
+              trong Preview
+              <br />
+              với hướng bắt đầu từ trái qua phải rồi xong trên xuống dưới.
+              <br />
+              - Các phần không đủ chiều dài sẽ bị đẩy xuống.
+              - <strong>Lưu ý:</strong> Tổng số hàng và tổng số cột không nên vượt quá số cột hay số hàng cao nhất
+              <br /> của mỗi mục của content vì có thể gây ra lỗi reponsive.
+              - <strong>Lưu ý:</strong> Hãy cố gắng tạo các mục sao cho nó vừa grid và không có phần trống.
+            </div>
+          </div>
+          <div id="gridPreview" class="box-border hidden">
+            <h4>Preview</h4>
+            <div id="gridNamePreview" class="section-header rounded-t-xl mb-1" style="border-radius: 0"></div>
+            <div id="gridTable" class="grid p-[2px] gap-[2px] bg-black"></div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </main>
 
@@ -52,11 +117,6 @@
 
   <!-- END MAIN -->
   <script src="./js/initialData.js"></script>
-  <script src="./pages/admin_page.js"></script>
-  <script src="./pages/info.js"></script>
-  <script src="./pages/home.js"></script>
-  <script src="./pages/student_info.js"></script>
-  <script src="./pages/web_tech.js"></script>
   <script src="./js/admin.js"></script>
   <script src="./js/scripts.js"></script>
 
