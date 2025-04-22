@@ -51,7 +51,7 @@ const quill = new Quill('#quillEditor', {
 });
 
 window.onload = () => {
-  showContent('admin-page')
+  showContent(pages[0].id)
 }
 
 

@@ -429,6 +429,9 @@ function showContent(sectionId) {
         sidebar.appendChild(anchor)
     }
 
+    const anchor = createSidebarPageLink('Admin Page', 'admin-page')
+    sidebar.appendChild(anchor)
+
     // Tạo link tới các sidebar item trong page
     pages.forEach(page => {
         if (page.id == sectionId) {
