@@ -724,9 +724,9 @@ const initialData = [
         id: crypto.randomUUID(),
         sidebarMenuItems: [
             {
-                name: 'Thông tin cá nhân',
+                name: 'Curriculum Vitae (CV)',
                 id: crypto.randomUUID(),
-                totalRows: 1,
+                totalRows: 2,
                 totalCols: 2,
                 contents: [
                     {
@@ -755,32 +755,21 @@ const initialData = [
                             <div class="details"><span>Email:</span> Anh.nt225119@sis.hust.edu.vn</div>
                         </div>
                         `
-                    }
-                ]
-            },
-            {
-                name: 'Kĩ năng',
-                id: crypto.randomUUID(),
-                totalRows: 1,
-                totalCols: 1,
-                contents: [
+                    },
                     {
-                        name: 'Bảng',
+                        name: 'Kỹ năng',
                         rows: 1,
-                        cols: 1,
+                        cols: 2,
                         html: `
+                        <h5>Kỹ năng</h5>
                         <table class="table-info">
                             <tr>
                                 <th>Ngôn ngữ</th>
-                                <td>HTML, CSS, JavaScript, PHP, Java</td>
+                                <td>HTML, CSS, JavaScript, Java, Python</td>
                             </tr>
                             <tr>
                                 <th>Frameworks</th>
-                                <td>ReactJS, NodeJS, Express</td>
-                            </tr>
-                            <tr>
-                                <th>Công cụ</th>
-                                <td>Git, Visual Studio Code, Postman</td>
+                                <td>ReactJS, NodeJS, ExpressJS</td>
                             </tr>
                             <tr>
                                 <th>Cơ sở dữ liệu</th>
@@ -792,58 +781,63 @@ const initialData = [
                 ]
             },
             {
-                name: 'Dự án',
+                name: 'Các dự án đã tham gia',
                 id: crypto.randomUUID(),
-                totalRows: 1,
+                totalRows: 2,
                 totalCols: 1,
                 contents: [
                     {
-                        name: 'Dự án',
+                        name: 'Tool gợi ý Deck cho Deck-Building game',
                         rows: 1,
                         cols: 1,
                         html: `
-                        <table class="table-info">
-                            <tr>
-                                <th>Ứng dụng Quản lý Dân số</th>
-                                <td>Nhóm 4 người <br>
-                                    Nhiệm vụ: Thiết kế giao diện người dùng, phát triển các tính năng front-end <br>
-                                    Công nghệ sử dụng: Java, MySQL <br>
-                                    Mục tiêu: Tạo giao diện người dùng cho hệ thống</td>
-                            </tr>
-                            <tr>
-                                <th>Hệ thống quản lý tuyển sinh</th>
-                                <td>Nhóm 4 người <br>
-                                    Nhiệm vụ: Phát triển front-end <br>
-                                    Công nghệ sử dụng: HTML, CSS, JavaScript, MySQL, PHP <br>
-                                    Mục tiêu: Tạo giao diện người dùng cho hệ thống</td>
-                            </tr>
-                            <tr>
-                                <th>Hệ thống đánh giá dịch vụ sản phẩm</th>
-                                <td>Cá nhân <br>
-                                    Công nghệ sử dụng: HTML, CSS, JavaScript, MySQL, NodeJS, React
-                                </td>
-                             </tr>
-                        </table>
+                        <h5>Tool gợi ý Deck cho Deck-Building game</h5>
+                        <ul>
+                            <li>Sử dụng ReactJS để phát triển Frontend và ExpressJS để phát triển Backend</li>
+                            <li>Sử dụng Pandas và Numpy để xây dựng hệ gợi ý bộ bài.</li>
+                            <li>Xây dựng Python APIs với FastAPI.</li>
+                        </ul>
+                        `
+                    },
+                    {
+                        name: 'Ứng dụng quản lý chung cư',
+                        rows: 1,
+                        cols: 1,
+                        html: `
+                        <h5>Ứng dụng quản lý chung cư</h5>
+                        <p>Phát triển Backend với REST APIs sử dụng MySQL, ExpressJS và NodeJS</p>
                         `
                     }
                 ]
             },
             {
-                name: 'Sở thích',
+                name: 'Sinh hoạt động cộng đồng',
                 id: crypto.randomUUID(),
-                totalRows: 1,
+                totalRows: 3,
                 totalCols: 1,
                 contents: [
                     {
-                        name: 'Sở thích',
+                        name: 'Sinh hoạt công dân 2023',
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li>Đọc sách</li>
-                            <li>Nghe nhạc</li>
-                            <li>Xem phim</li>
-                        </ul>
+                        <p>Sinh hoạt công dân năm 2023</p>
+                        `
+                    },
+                    {
+                        name: 'Sinh hoạt công dân 2024',
+                        rows: 1,
+                        cols: 1,
+                        html: `
+                        <p>Sinh hoạt công dân năm 2024</p>
+                        `
+                    },
+                    {
+                        name: 'Sinh hoạt công dân 2022',
+                        rows: 1,
+                        cols: 1,
+                        html: `
+                        <p>Sinh hoạt công dân năm 2022</p>
                         `
                     }
                 ]

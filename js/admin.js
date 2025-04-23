@@ -212,7 +212,9 @@ function showContentLayout(itemIndex, pageIndex) {
 function addFirstSidebarItem(itemIndex, pageIndex) {
     pages[Number(pageIndex)].sidebarMenuItems.splice(Number(itemIndex), 0, {
         name: 'Mục mới',
-        id: crypto.randomUUID()
+        id: crypto.randomUUID(),
+        totalRows: 1,
+        totalCols: 1
     })
     localStorage.setItem('pages', JSON.stringify(pages))
     showPage(pageIndex)
@@ -237,7 +239,9 @@ function addFirstSidebarItem(itemIndex, pageIndex) {
 function addSidebarMenuItem(itemIndex, pageIndex) {
     pages[Number(pageIndex)].sidebarMenuItems.splice(Number(itemIndex) + 1, 0, {
         name: 'Mục mới',
-        id: crypto.randomUUID()
+        id: crypto.randomUUID(),
+        totalRows: 1,
+        totalCols: 1
     })
     localStorage.setItem('pages', JSON.stringify(pages))
     showPage(pageIndex)
@@ -292,7 +296,9 @@ function displayContent(contentIndex, itemIndex, pageIndex) {
 
     // load any previously saved HTML
     if (currentContent.html) {
-        quill.root.innerHTML = currentContent.html;
+        // quill.clipboard.dangerouslyPasteHTML(currentContent.html, 'user')
+        const delta = quill.clipboard.convert({ html: currentContent.html })
+        quill.setContents(delta, 'user')
     }
 
     // Save button
@@ -300,6 +306,8 @@ function displayContent(contentIndex, itemIndex, pageIndex) {
     saveEditorBtn.onclick = () => {
         currentContent.html = quill.root.innerHTML;
         localStorage.setItem('pages', JSON.stringify(pages));
+
+        renderGridTable(section.name, section.contents, section.totalRows, section.totalCols)
     };
 
     // Display Preview
@@ -442,10 +450,11 @@ function showContent(sectionId) {
             title.appendChild(bold)
             sidebar.append(title)
 
-            page.sidebarMenuItems.forEach(sidebarItem => {
-                const anchor = createSidebarElement(sidebarItem.name, sidebarItem.id)
-                sidebar.appendChild(anchor);
-            })
+            if (page.sidebarMenuItems)
+                page.sidebarMenuItems.forEach(sidebarItem => {
+                    const anchor = createSidebarElement(sidebarItem.name, sidebarItem.id)
+                    sidebar.appendChild(anchor);
+                })
 
             mainContainer.innerHTML = generatePageMain(page.id)
 
@@ -530,7 +539,32 @@ function createSidebarMenuTable(arr, pageIndex) {
 
     const firstSection = document.createElement('div')
     firstSection.classList += 'flex border-solid border-b-2 border-gray-300'
-    firstSection.innerHTML = `
+
+
+    if (pages[index].name == 'Thông tin sinh viên') {
+        const nameCell = document.createElement('div')
+        nameCell.classList = 'w-1/2'
+        nameCell.innerText = pages[index].name
+
+        const buttonCell = document.createElement('div')
+        buttonCell.classList = 'w-1/2'
+
+        const buttonContainer = document.createElement('div')
+        buttonContainer.classList = 'menu-functions'
+
+        const addFirstBtn = document.createElement('button')
+        addFirstBtn.onclick = () => addFirstSidebarItem(0, pageIndex)
+        addFirstBtn.innerHTML = '<i class="fa-solid fa-plus"></i>'
+
+        const resetBtn = createResetButton(index)
+
+        firstSection.appendChild(nameCell)
+        buttonContainer.appendChild(resetBtn)
+        buttonContainer.appendChild(addFirstBtn)
+        buttonCell.appendChild(buttonContainer)
+        firstSection.appendChild(buttonCell)
+    } else {
+        firstSection.innerHTML = `
         <div class="w-1/2"><b>${pages[index].name}</b></div>
         <div class="w-1/2 flex justify-end align-center">
             <div class="menu-functions">
@@ -539,7 +573,8 @@ function createSidebarMenuTable(arr, pageIndex) {
                 </button>
             </div>
         </div>
-    `
+         `
+    }
 
     menuTable.appendChild(firstSection)
 
@@ -789,7 +824,7 @@ function renderGridTable(name, contents, totalRows, totalCols) {
 
     contents.forEach(item => {
         const cell = document.createElement('div');
-        cell.className = `row-span-${item.rows} col-span-${item.cols} bg-white`;
+        cell.className = `p-2 row-span-${item.rows} col-span-${item.cols} bg-white`;
         cell.innerHTML = item.html ? item.html : item.name
         container.appendChild(cell);
     });
@@ -799,31 +834,47 @@ function generatePageMain(pageId) {
     const page = pages.find(page => page.id === pageId)
     const main = document.createElement('div')
 
-    page.sidebarMenuItems.forEach(item => {
-        const section = document.createElement('div')
-        section.classList = 'mt-8'
-        section.id = item.id
+    if (page.sidebarMenuItems) {
+        page.sidebarMenuItems.forEach(item => {
+            const section = document.createElement('div')
+            section.classList = 'mt-8'
+            section.id = item.id
 
-        const header = document.createElement('div')
-        header.classList = 'section-header rounded-t-xl mb-1'
-        header.style.borderRadius = 0;
-        header.innerText = item.name
+            const header = document.createElement('div')
+            header.classList = 'section-header rounded-t-xl mb-1'
+            header.style.borderRadius = 0;
+            header.innerText = item.name
 
-        const grid = document.createElement('div')
-        grid.classList = 'grid p-[2px] gap-[2px] bg-black'
-        grid.classList.add(`grid-rows-${item.totalRows}`, `grid-cols-${item.totalCols}`);
+            const grid = document.createElement('div')
+            grid.classList = 'grid p-[2px] gap-[2px] bg-black'
+            grid.classList.add(`grid-rows-${item.totalRows}`, `grid-cols-${item.totalCols}`);
 
-        item.contents.forEach(content => {
-            const cell = document.createElement('div');
-            cell.className = `p-2 row-span-${content.rows} col-span-${content.cols} bg-white`;
-            cell.innerHTML = content.html ? content.html : content.name
-            grid.appendChild(cell);
+            item.contents.forEach(content => {
+                const cell = document.createElement('div');
+                cell.className = `p-2 row-span-${content.rows} col-span-${content.cols} bg-white`;
+                cell.innerHTML = content.html ? content.html : content.name
+                grid.appendChild(cell);
+            })
+
+            section.appendChild(header)
+            section.appendChild(grid)
+            main.appendChild(section)
         })
-
-        section.appendChild(header)
-        section.appendChild(grid)
-        main.appendChild(section)
-    })
+    }
 
     return main.innerHTML
+}
+
+function createResetButton(index) {
+    const btn = document.createElement('button')
+    btn.classList = 'cursor-pointer hover:text-blue-500'
+    btn.innerHTML = '<i class="fa-solid fa-arrow-rotate-left"></i>'
+    btn.onclick = () => {
+        const original = initialData.find(el => el.name == 'Thông tin sinh viên')
+        pages[index] = JSON.parse(JSON.stringify(original));
+        localStorage.setItem('pages', JSON.stringify(pages))
+
+        showPage(index)
+    }
+    return btn
 }
