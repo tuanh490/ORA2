@@ -61,6 +61,48 @@
                   class="px-4 py-2 bg-green-500 text-white cursor-pointer rounded hover:bg-green-600">Lưu nội
                   dung</button>
               </div>
+              <div class="mt-4">
+                <button class="cursor-pointer hover:text-sky-500 transition duration-200" onclick="toggleEditorGuide()">
+                  <i class="fa-solid fa-circle-info text-3xl"></i>
+                </button>
+                <div id="editorGuide" class="hidden">
+                  - Các nội dung thông thường sẽ được hiện ra đúng như trong editor.
+                  <br />
+                  - Các nội dung mà muốn tùy chỉnh với HTML thì sẽ cần phải cho vào block code.
+                  <br />
+                  - Tùy chỉnh HTML có thể sử dụng framework <span class="text-sky-500 hover:text-blue-600"><a
+                      href="https://tailwindcss.com/">TailwindCSS</a></span>.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="gridHelp" class="mt-4 hidden">
+            <button class="cursor-pointer hover:text-sky-500 transition duration-200" onclick="toggleGuide()">
+              <i class="fa-solid fa-circle-info text-3xl"></i>
+            </button>
+            <div id="gridGuide" class="hidden">
+              - Layout sử dụng grid để sắp xếp các mục content.
+              <br />
+              - Dưới bảng là thông số cho mỗi content riêng. Mỗi content sẽ có tổng số hàng và cột tương ứng.
+              <br />
+              - Mỗi mục của một content sẽ có số dòng và cột có thể thay đổi qua <i
+                class="fa-solid fa-pen-to-square"></i>.
+              <br />
+              - Các mục của content lần lượt trong bảng sẽ được hiển thị
+              trong Preview
+              <br />
+              với hướng bắt đầu từ trái qua phải rồi xong trên xuống dưới.
+              <br />
+              - Các phần không đủ chiều dài sẽ bị đẩy xuống.
+              <br />
+              - Nội dung trong phần Preview sẽ là tên của mục trong content cho tới khi nội dung được sửa trong <i
+                class="fa-solid fa-eye"></i>
+              <br />
+              - <strong>Lưu ý:</strong> Tổng số hàng và tổng số cột không nên vượt quá số cột hay số hàng cao nhất
+              <br /> của mỗi mục của content vì có thể gây ra lỗi reponsive.
+              <br />
+              - <strong>Lưu ý:</strong> Hãy cố gắng tạo các mục sao cho nó vừa grid và không có phần trống.
             </div>
           </div>
           <div class="mt-4">
@@ -69,44 +111,13 @@
               Trở lại
             </button>
           </div>
-        </div>
-        <div id="gridHelp" class="mt-4 mb-16 hidden">
-          <button class="cursor-pointer hover:text-sky-500 transition duration-200" onclick="toggleGuide()">
-            <i class="fa-solid fa-circle-info text-3xl"></i>
-          </button>
-          <div id="gridGuide" class="hidden">
-            - Layout sử dụng grid để sắp xếp các mục content.
-            <br />
-            - Dưới bảng là thông số cho mỗi content riêng. Mỗi content sẽ có tổng số hàng và cột tương ứng.
-            <br />
-            - Mỗi mục của một content sẽ có số dòng và cột có thể thay đổi qua <i
-              class="fa-solid fa-pen-to-square"></i>.
-            <br />
-            - Các mục của content lần lượt trong bảng sẽ được hiển thị
-            trong Preview
-            <br />
-            với hướng bắt đầu từ trái qua phải rồi xong trên xuống dưới.
-            <br />
-            - Các phần không đủ chiều dài sẽ bị đẩy xuống.
-            <br />
-            - Nội dung trong phần Preview sẽ là tên của mục trong content cho tới khi nội dung được sửa trong <i
-              class="fa-solid fa-eye"></i>
-            <br />
-            - <strong>Lưu ý:</strong> Tổng số hàng và tổng số cột không nên vượt quá số cột hay số hàng cao nhất
-            <br /> của mỗi mục của content vì có thể gây ra lỗi reponsive.
-            <br />
-            - <strong>Lưu ý:</strong> Hãy cố gắng tạo các mục sao cho nó vừa grid và không có phần trống.
+          <div id="gridPreview" class="box-border hidden">
+            <h4>Preview</h4>
+            <div id="gridNamePreview" class="section-header rounded-t-xl mb-1" style="border-radius: 0"></div>
+            <div id="gridTable" class="grid p-[2px] gap-[2px] bg-black"></div>
           </div>
         </div>
-        <div id="gridPreview" class="box-border hidden">
-          <h4>Preview</h4>
-          <div id="gridNamePreview" class="section-header rounded-t-xl mb-1" style="border-radius: 0"></div>
-          <div id="gridTable" class="grid p-[2px] gap-[2px] bg-black"></div>
-        </div>
-
       </div>
-    </div>
-    </div>
   </main>
 
   <!-- Footer -->

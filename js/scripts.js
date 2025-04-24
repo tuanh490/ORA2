@@ -26,6 +26,11 @@ function toggleGuide() {
   gridGuide.classList.toggle('hidden')
 }
 
+function toggleEditorGuide() {
+  const editorGuide = document.getElementById('editorGuide')
+  editorGuide.classList.toggle('hidden')
+}
+
 let pages = localStorage.getItem('pages')
 
 if (!pages) {
