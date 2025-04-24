@@ -297,14 +297,27 @@ function displayContent(contentIndex, itemIndex, pageIndex) {
     // load any previously saved HTML
     if (currentContent.html) {
         // quill.clipboard.dangerouslyPasteHTML(currentContent.html, 'user')
-        const delta = quill.clipboard.convert({ html: currentContent.html })
-        quill.setContents(delta, 'user')
+        // const delta = {
+        //     'ops': [
+        //         {
+        //             'attributes': {
+        //                 'code-block': true
+        //             },
+        //             'insert': currentContent.html
+        //         },
+        //     ]
+        // }
+        // quill.setContents(delta, 'user')
+        quill.root.innerHTML = currentContent.html
+    } else {
+        quill.setText('')
     }
 
     // Save button
     const saveEditorBtn = document.getElementById('saveEditorBtn')
     saveEditorBtn.onclick = () => {
         currentContent.html = quill.root.innerHTML;
+        console.log(quill.root.innerHTML)
         localStorage.setItem('pages', JSON.stringify(pages));
 
         renderGridTable(section.name, section.contents, section.totalRows, section.totalCols)
@@ -825,7 +838,7 @@ function renderGridTable(name, contents, totalRows, totalCols) {
     contents.forEach(item => {
         const cell = document.createElement('div');
         cell.className = `p-2 row-span-${item.rows} col-span-${item.cols} bg-white`;
-        cell.innerHTML = item.html ? item.html : item.name
+        cell.innerHTML = item.html ? createQuillContentElement(item.html).innerHTML : item.name
         container.appendChild(cell);
     });
 }
@@ -852,7 +865,7 @@ function generatePageMain(pageId) {
             item.contents.forEach(content => {
                 const cell = document.createElement('div');
                 cell.className = `p-2 row-span-${content.rows} col-span-${content.cols} bg-white`;
-                cell.innerHTML = content.html ? content.html : content.name
+                cell.innerHTML = content.html ? createQuillContentElement(content.html).innerHTML : content.name
                 grid.appendChild(cell);
             })
 
@@ -877,4 +890,43 @@ function createResetButton(index) {
         showPage(index)
     }
     return btn
+}
+
+/**
+ * Render Quill’s content into `previewEl`, but:
+ * - Any <div class="ql-code-block-container"> … </div>
+ *   → take each inner .ql-code-block’s text and render it via innerHTML
+ * - Everything else → clone the node (so all classes/styles stay intact)
+ */
+function createQuillContentElement(html) {
+    // 1) Parse html in a temporary container
+    const container = document.createElement('div')
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+
+    // 2) Walk its *direct* children in order
+    Array.from(temp.childNodes).forEach(node => {
+        // 4) Is this the code-block container?
+        if (
+            node.nodeType === 1 && // element
+            node.classList.contains('ql-code-block-container')
+        ) {
+            // 5) Collect all the innerText of each .ql-code-block
+            let codeHTML = '';
+            node.querySelectorAll('.ql-code-block').forEach(div => {
+                codeHTML += div.innerText + '\n';
+            });
+
+            // 6) Dump that as real HTML
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = codeHTML;
+            container.appendChild(wrapper);
+
+        } else {
+            // 7) Not code-block: clone it verbatim (classes, tags, inline formats)
+            container.appendChild(node.cloneNode(true));
+        }
+    });
+
+    return container
 }

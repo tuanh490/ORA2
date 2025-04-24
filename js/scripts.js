@@ -40,8 +40,8 @@ console.log(pages)
 
 // Initialize quill
 const toolbarOptions = [
-  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-  ['blockquote', 'code-block'],
+  ['bold', 'italic', 'underline'],        // toggled buttons
+  ['code-block'],
   ['link', 'image'],
 
   [{ 'list': 'ordered' }, { 'list': 'bullet' }],

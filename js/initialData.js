@@ -14,26 +14,31 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div>
-                            <table class="table-info">
-                                <tr>
-                                    <th>Thứ</th>
-                                    <td>Thứ 4 </td>
-                                </tr>
-                                <tr>
-                                    <th>Thời gian/Tiết</th>
-                                    <td>Từ 3 đến 6</td>
-                                </tr>
-                                <tr>
-                                    <th>Ngày/Tuần</th>
-                                    <td>24-31,33-41</td>
-                                </tr>
-                                <tr>
-                                    <th>Tại địa điểm</th>
-                                    <td>TC-312</td>
-                                </tr>
-                            </table>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div&gt;</div>
+  <div class="ql-code-block">                            &lt;table class="table-info"&gt;</div>
+  <div class="ql-code-block">                                &lt;tr&gt;</div>
+  <div class="ql-code-block">                                    &lt;th&gt;Thứ&lt;/th&gt;</div>
+  <div class="ql-code-block">                                    &lt;td&gt;Thứ 4 &lt;/td&gt;</div>
+  <div class="ql-code-block">                                &lt;/tr&gt;</div>
+  <div class="ql-code-block">                                &lt;tr&gt;</div>
+  <div class="ql-code-block">                                    &lt;th&gt;Thời gian/Tiết&lt;/th&gt;</div>
+  <div class="ql-code-block">                                    &lt;td&gt;Từ 3 đến 6&lt;/td&gt;</div>
+  <div class="ql-code-block">                                &lt;/tr&gt;</div>
+  <div class="ql-code-block">                                &lt;tr&gt;</div>
+  <div class="ql-code-block">                                    &lt;th&gt;Ngày/Tuần&lt;/th&gt;</div>
+  <div class="ql-code-block">                                    &lt;td&gt;24-31,33-41&lt;/td&gt;</div>
+  <div class="ql-code-block">                                &lt;/tr&gt;</div>
+  <div class="ql-code-block">                                &lt;tr&gt;</div>
+  <div class="ql-code-block">                                    &lt;th&gt;Tại địa điểm&lt;/th&gt;</div>
+  <div class="ql-code-block">                                    &lt;td&gt;TC-312&lt;/td&gt;</div>
+  <div class="ql-code-block">                                &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;/table&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -49,36 +54,41 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <table class="table-info">
-                            <tr>
-                                <th>Mã lớp</th>
-                                <td>157533</td>
-                            </tr>
-                            <tr>
-                                <th>Loại hình</th>
-                                <td>LT+BT</td>
-                            </tr>
-                            <tr>
-                                <th>Hệ</th>
-                                <td>CN</td>
-                            </tr>
-                            <tr>
-                                <th>GVHD</th>
-                                <td>Phạm Huy Hoàng</td>
-                            </tr>
-                            <tr>
-                                <th>Số lần vắng</th>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Số sinh viên</th>
-                                <td>151</td>
-                            </tr>
-                            <tr>
-                                <th>Hình thức GD</th>
-                                <td>Offline</td>
-                            </tr>
-                        </table>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;table class="table-info"&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Mã lớp&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;157533&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Loại hình&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;LT+BT&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Hệ&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;CN&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;GVHD&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;Phạm Huy Hoàng&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Số lần vắng&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;0&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Số sinh viên&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;151&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Hình thức GD&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;Offline&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                        &lt;/table&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -94,57 +104,62 @@ const initialData = [
                         rows: 1,
                         cols: 2,
                         html: `
-                        <div style="flex: 2; margin-right: 30px;">
-                            <ul>
-                                <li><strong>Công ty:</strong> FPT Software</li>
-                            </ul>
-                            <p>
-                                FPT Software là tên gọi khác của công ty TNHH Phần Mềm FPT với nhiệm vụ chính là gia công phần
-                                mềm tại
-                                Việt Nam và nước ngoài. Thành lập từ năm 1988 đến nay với 3 Trụ sở chính FPT Software đặt tại
-                                Việt Nam
-                                và
-                                một số nước trên toàn thế giới như Hoa Kỳ, Nhật Bản, Malaysia, Đức, Úc, Singapore, Malaysia,
-                                Thái Lan
-                                và
-                                Philipines hiện FPT Software đáp ứng nhu cầu gia công phần mềm lớn cho hơn 150 công ty hàng đầu
-                                tại 20
-                                quốc gia lớn nhất trên thế giới hiện nay với các hợp đồng lớn có khi đạt cả 1 triệu USD dành cho
-                                một
-                                số
-                                đối tác lớn như Hitachi, NEOPOST, Petronas, Deutsche Bank, và Unilever với hơn 4000 nhân viên
-                                trên
-                                toàn
-                                thế giới. </p>
-                            <p>FPT Software theo đuổi mục tiêu gia công phần mềm để đáp ứng cho nhu cầu phát triển CNTT của các
-                                hãng
-                                phần
-                                mềm trong nước, các công ty lớn trong nước và tham vọng hơn là xuất khẩu phần mềm trên toàn thế
-                                giới
-                                cho
-                                các công ty nước ngoài biết đến tập đoàn FPT, mục đích chính là vươn đến tầm cao mới thông qua
-                                công
-                                nghệ
-                                nhằm nâng cao năng suất lao động.</p>
-                            <p>Kinh doanh của FPT Software xuất phát từ Công nghệ thông tin và Viễn Thông FPT là cốt lõi để đáp
-                                ứng
-                                cho
-                                khách hàng trên 63 tỉnh thành trên toàn lãnh thổ Việt Nam và mở rộng đến khách hàng toàn cầu. Từ
-                                khi
-                                được
-                                thành lập cho đến nay, FPT Software đã là công ty phần mềm số 1 tại Việt Nam trong lĩnh vực tích
-                                hợp
-                                hệ
-                                thống, phân phối và bán lẻ, dịch vụ Công Nghệ Thông tin, xuất khẩu gia công phần mềm, bán lẻ sản
-                                phẩm
-                                CNTT. Ở lĩnh vực Viễn Thông FPT là một trong 3 nhà cung cấp dịch vụ internet cáp quang FPT hàng
-                                đầu
-                                tại
-                                Việt Nam. Về lĩnh vực quảng cáo, FPT là đơn vị quảng cáo trực tuyến số 1 tại Việt Nam với trang
-                                báo
-                                điện
-                                tử VNexpress với hơn 42 triệu lượt truy cập mỗi ngày.</p>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div style="flex: 2; margin-right: 30px;"&gt;</div>
+  <div class="ql-code-block">                            &lt;ul&gt;</div>
+  <div class="ql-code-block">                                &lt;li&gt;&lt;strong&gt;Công ty:&lt;/strong&gt; FPT Software&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;/ul&gt;</div>
+  <div class="ql-code-block">                            &lt;p&gt;</div>
+  <div class="ql-code-block">                                FPT Software là tên gọi khác của công ty TNHH Phần Mềm FPT với nhiệm vụ chính là gia công phần</div>
+  <div class="ql-code-block">                                mềm tại</div>
+  <div class="ql-code-block">                                Việt Nam và nước ngoài. Thành lập từ năm 1988 đến nay với 3 Trụ sở chính FPT Software đặt tại</div>
+  <div class="ql-code-block">                                Việt Nam</div>
+  <div class="ql-code-block">                                và</div>
+  <div class="ql-code-block">                                một số nước trên toàn thế giới như Hoa Kỳ, Nhật Bản, Malaysia, Đức, Úc, Singapore, Malaysia,</div>
+  <div class="ql-code-block">                                Thái Lan</div>
+  <div class="ql-code-block">                                và</div>
+  <div class="ql-code-block">                                Philipines hiện FPT Software đáp ứng nhu cầu gia công phần mềm lớn cho hơn 150 công ty hàng đầu</div>
+  <div class="ql-code-block">                                tại 20</div>
+  <div class="ql-code-block">                                quốc gia lớn nhất trên thế giới hiện nay với các hợp đồng lớn có khi đạt cả 1 triệu USD dành cho</div>
+  <div class="ql-code-block">                                một</div>
+  <div class="ql-code-block">                                số</div>
+  <div class="ql-code-block">                                đối tác lớn như Hitachi, NEOPOST, Petronas, Deutsche Bank, và Unilever với hơn 4000 nhân viên</div>
+  <div class="ql-code-block">                                trên</div>
+  <div class="ql-code-block">                                toàn</div>
+  <div class="ql-code-block">                                thế giới. &lt;/p&gt;</div>
+  <div class="ql-code-block">                            &lt;p&gt;FPT Software theo đuổi mục tiêu gia công phần mềm để đáp ứng cho nhu cầu phát triển CNTT của các</div>
+  <div class="ql-code-block">                                hãng</div>
+  <div class="ql-code-block">                                phần</div>
+  <div class="ql-code-block">                                mềm trong nước, các công ty lớn trong nước và tham vọng hơn là xuất khẩu phần mềm trên toàn thế</div>
+  <div class="ql-code-block">                                giới</div>
+  <div class="ql-code-block">                                cho</div>
+  <div class="ql-code-block">                                các công ty nước ngoài biết đến tập đoàn FPT, mục đích chính là vươn đến tầm cao mới thông qua</div>
+  <div class="ql-code-block">                                công</div>
+  <div class="ql-code-block">                                nghệ</div>
+  <div class="ql-code-block">                                nhằm nâng cao năng suất lao động.&lt;/p&gt;</div>
+  <div class="ql-code-block">                            &lt;p&gt;Kinh doanh của FPT Software xuất phát từ Công nghệ thông tin và Viễn Thông FPT là cốt lõi để đáp</div>
+  <div class="ql-code-block">                                ứng</div>
+  <div class="ql-code-block">                                cho</div>
+  <div class="ql-code-block">                                khách hàng trên 63 tỉnh thành trên toàn lãnh thổ Việt Nam và mở rộng đến khách hàng toàn cầu. Từ</div>
+  <div class="ql-code-block">                                khi</div>
+  <div class="ql-code-block">                                được</div>
+  <div class="ql-code-block">                                thành lập cho đến nay, FPT Software đã là công ty phần mềm số 1 tại Việt Nam trong lĩnh vực tích</div>
+  <div class="ql-code-block">                                hợp</div>
+  <div class="ql-code-block">                                hệ</div>
+  <div class="ql-code-block">                                thống, phân phối và bán lẻ, dịch vụ Công Nghệ Thông tin, xuất khẩu gia công phần mềm, bán lẻ sản</div>
+  <div class="ql-code-block">                                phẩm</div>
+  <div class="ql-code-block">                                CNTT. Ở lĩnh vực Viễn Thông FPT là một trong 3 nhà cung cấp dịch vụ internet cáp quang FPT hàng</div>
+  <div class="ql-code-block">                                đầu</div>
+  <div class="ql-code-block">                                tại</div>
+  <div class="ql-code-block">                                Việt Nam. Về lĩnh vực quảng cáo, FPT là đơn vị quảng cáo trực tuyến số 1 tại Việt Nam với trang</div>
+  <div class="ql-code-block">                                báo</div>
+  <div class="ql-code-block">                                điện</div>
+  <div class="ql-code-block">                                tử VNexpress với hơn 42 triệu lượt truy cập mỗi ngày.&lt;/p&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     },
                     {
@@ -152,14 +167,19 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <a href="https://fptsoftware.com/" target="_blank" style="flex: 1; margin-top: 20px;">
-                            <div class="FRB" style="width: 100%;">
-                                <img class="DRB"
-                                    src="http://itde.hvnh.edu.vn/public/img/news/files/FPT%20tuy%E1%BB%83n%20d%E1%BB%A5ng%20(2).jpg"
-                                    style="width: 100%;">
-                                <div class="ERB" style="width: 100%;color: blue" title="">FPT SOFTWARE TUYỂN DỤNG</div>
-                            </div>
-                        </a>
+                        <div class="ql-code-block-container" spellcheck="false">
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                        &lt;a href="https://fptsoftware.com/" target="_blank" style="flex: 1; margin-top: 20px;"&gt;</div>
+   <div class="ql-code-block">                            &lt;div class="FRB" style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                &lt;img class="DRB"</div>
+   <div class="ql-code-block">                                    src="http://itde.hvnh.edu.vn/public/img/news/files/FPT%20tuy%E1%BB%83n%20d%E1%BB%A5ng%20(2).jpg"</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                &lt;div class="ERB" style="width: 100%;color: blue" title=""&gt;FPT SOFTWARE TUYỂN DỤNG&lt;/div&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block">                        &lt;/a&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -181,156 +201,160 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                            <!-- Cột 1 -->
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Đơn vị (*)</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>Trường Công nghệ Thông tin và Truyền thông</option>
-                                </select>
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Đơn vị con</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>Nothing selected</option>
-                                </select>
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Mã học phần (*)</label>
-                                <input type="text" value="IT4409" dir="ltr" readonly="" disabled style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Tên học phần</label>
-                                <input type="text" value="Công nghệ web và dịch vụ trực tuyến" dir="ltr" readonly="" disabled
-                                    style="width: 100%; white-space: nowrap; overflow: hidden;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Tên tiếng Anh</label>
-                                <input type="text" value="Web technologies and e-Services"
-                                    class="form-control IBC form-control-readonly" dir="ltr" readonly="" disabled
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Hệ đào tạo</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>4 items selected</option>
-                                </select>
-                                <div style="width: 100%;">
-                                    <a>Thạc sỹ Khoa học&nbsp;[X]&nbsp;&nbsp;&nbsp;</a>
-                                    <a>Kỹ sư chính quy&nbsp;[X]&nbsp;&nbsp;&nbsp;</a>
-                                    <a>Cử nhân&nbsp;[X]&nbsp;&nbsp;&nbsp;</a>
-                                    <a>Việt-Nhật&nbsp;[X]&nbsp;&nbsp;&nbsp;</a>
-                                </div>
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Ngành đào tạo</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>Trường Công nghệ Thông tin và Truyền thông</option>
-                                </select>
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Loại hình (*)</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>Lớp</option>
-                                </select>
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Điều phối viên</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>Phạm Huy Hoàng</option>
-                                </select>
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Nhóm chuyên môn</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>Phạm Huy Hoàng</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Cột 2 -->
-                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>HP liên quan</label>
-                                <input type="text" placeholder="Nhập mã HP" disabled style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Hệ số điểm thực hành</label>
-                                <input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Số tín chỉ</label>
-                                <input type="text" value="3" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Số giờ LT</label>
-                                <input type="text" value="2" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Số giờ BT</label>
-                                <input type="text" value="2" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Số giờ TN/TH</label>
-                                <input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Số giờ tự học</label>
-                                <input type="text" value="6" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Số giờ thực tập</label>
-                                <input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>kHD thực tập</label>
-                                <input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>kHD đồ án</label>
-                                <input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Phân bố</label>
-                                <input type="text" value="3(2-2-0-6)" class="form-control IBC" dir="ltr" disabled=""
-                                    style="width: 100%;">
-                            </div>
-
-                            <div style="flex: 1; min-width: 300px;">
-                                <label>Hình thức thi cuối kỳ</label>
-                                <select id="dropdown" disabled style="width: 100%;">
-                                    <option>[Chọn hình thức thi cuối kỳ]</option>
-                                </select>
-                            </div>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                        &lt;div style="display: flex; flex-wrap: wrap; gap: 20px;"&gt;</div>
+   <div class="ql-code-block">                            &lt;!-- Cột 1 --&gt;</div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Đơn vị (*)&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;Trường Công nghệ Thông tin và Truyền thông&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Đơn vị con&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;Nothing selected&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Mã học phần (*)&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="IT4409" dir="ltr" readonly="" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Tên học phần&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="Công nghệ web và dịch vụ trực tuyến" dir="ltr" readonly="" disabled</div>
+   <div class="ql-code-block">                                    style="width: 100%; white-space: nowrap; overflow: hidden;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Tên tiếng Anh&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="Web technologies and e-Services"</div>
+   <div class="ql-code-block">                                    class="form-control IBC form-control-readonly" dir="ltr" readonly="" disabled</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Hệ đào tạo&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;4 items selected&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                                &lt;div style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;a&gt;Thạc sỹ Khoa học&amp;nbsp;[X]&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/a&gt;</div>
+   <div class="ql-code-block">                                    &lt;a&gt;Kỹ sư chính quy&amp;nbsp;[X]&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/a&gt;</div>
+   <div class="ql-code-block">                                    &lt;a&gt;Cử nhân&amp;nbsp;[X]&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/a&gt;</div>
+   <div class="ql-code-block">                                    &lt;a&gt;Việt-Nhật&amp;nbsp;[X]&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/a&gt;</div>
+   <div class="ql-code-block">                                &lt;/div&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Ngành đào tạo&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;Trường Công nghệ Thông tin và Truyền thông&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Loại hình (*)&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;Lớp&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Điều phối viên&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;Phạm Huy Hoàng&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Nhóm chuyên môn&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;Phạm Huy Hoàng&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block">                        &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                        &lt;!-- Cột 2 --&gt;</div>
+   <div class="ql-code-block">                        &lt;div style="display: flex; flex-wrap: wrap; gap: 20px;"&gt;</div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;HP liên quan&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" placeholder="Nhập mã HP" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Hệ số điểm thực hành&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Số tín chỉ&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="3" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Số giờ LT&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="2" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Số giờ BT&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="2" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Số giờ TN/TH&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Số giờ tự học&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="6" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Số giờ thực tập&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;kHD thực tập&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;kHD đồ án&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="0" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Phân bố&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;input type="text" value="3(2-2-0-6)" class="form-control IBC" dir="ltr" disabled=""</div>
+   <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block"><br></div>
+   <div class="ql-code-block">                            &lt;div style="flex: 1; min-width: 300px;"&gt;</div>
+   <div class="ql-code-block">                                &lt;label&gt;Hình thức thi cuối kỳ&lt;/label&gt;</div>
+   <div class="ql-code-block">                                &lt;select id="dropdown" disabled style="width: 100%;"&gt;</div>
+   <div class="ql-code-block">                                    &lt;option&gt;[Chọn hình thức thi cuối kỳ]&lt;/option&gt;</div>
+   <div class="ql-code-block">                                &lt;/select&gt;</div>
+   <div class="ql-code-block">                            &lt;/div&gt;</div>
+   <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
                         `
                     }
                 ]
@@ -346,29 +370,33 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div>
-                            <div> 
-                            <label>
-                                <strong>Mô tả tóm tắt học phần (tiếng Việt)</strong>(*)
-                            </label>
-                            </div>
-                            <p><strong>Mục tiêu: </strong>Học phần cung cấp các kiến thức cần thiết để xây dựng và phát
-                                triển
-                                các ứng dụng, dịch vụ trực
-                                tuyến trên môi trường web. Sau khi học xong học phần này, sinh viên có khả năng:
-                                <ul>
-                                    <li>Có thể sử dụng một ngôn ngữ lập trình như JSP, PHP để phát triển ứng dụng web cho các
-                                        lĩnh
-                                        vực khác nhau như: hệ quản trị nội dung (CMS), cổng thông tin (Portal), hay các ứng dụng
-                                        điện
-                                        tử (eCommerce, eLearning, eGoverment,…)</li>
-                                    <li>Nắm vững được các công nghệ web, các platform, framework hiện đang thịnh hành.</li>
-                                </ul>
-                                Ngoài ra học phần cũng cung cấp cho sinh viên các kỹ năng làm việc nhóm, thuyết trình và thái
-                                độ
-                                cần thiết để làm việc và ứng dụng các kỹ thuật trong các dự án, công ty về phần mềm sau này.
-                            </p>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div&gt;</div>
+  <div class="ql-code-block">                            &lt;div&gt; </div>
+  <div class="ql-code-block">                            &lt;label&gt;</div>
+  <div class="ql-code-block">                                &lt;strong&gt;Mô tả tóm tắt học phần (tiếng Việt)&lt;/strong&gt;(*)</div>
+  <div class="ql-code-block">                            &lt;/label&gt;</div>
+  <div class="ql-code-block">                            &lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;p&gt;&lt;strong&gt;Mục tiêu: &lt;/strong&gt;Học phần cung cấp các kiến thức cần thiết để xây dựng và phát</div>
+  <div class="ql-code-block">                                triển</div>
+  <div class="ql-code-block">                                các ứng dụng, dịch vụ trực</div>
+  <div class="ql-code-block">                                tuyến trên môi trường web. Sau khi học xong học phần này, sinh viên có khả năng:</div>
+  <div class="ql-code-block">                                &lt;ul&gt;</div>
+  <div class="ql-code-block">                                    &lt;li&gt;Có thể sử dụng một ngôn ngữ lập trình như JSP, PHP để phát triển ứng dụng web cho các</div>
+  <div class="ql-code-block">                                        lĩnh</div>
+  <div class="ql-code-block">                                        vực khác nhau như: hệ quản trị nội dung (CMS), cổng thông tin (Portal), hay các ứng dụng</div>
+  <div class="ql-code-block">                                        điện</div>
+  <div class="ql-code-block">                                        tử (eCommerce, eLearning, eGoverment,…)&lt;/li&gt;</div>
+  <div class="ql-code-block">                                    &lt;li&gt;Nắm vững được các công nghệ web, các platform, framework hiện đang thịnh hành.&lt;/li&gt;</div>
+  <div class="ql-code-block">                                &lt;/ul&gt;</div>
+  <div class="ql-code-block">                                Ngoài ra học phần cũng cung cấp cho sinh viên các kỹ năng làm việc nhóm, thuyết trình và thái</div>
+  <div class="ql-code-block">                                độ</div>
+  <div class="ql-code-block">                                cần thiết để làm việc và ứng dụng các kỹ thuật trong các dự án, công ty về phần mềm sau này.</div>
+  <div class="ql-code-block">                            &lt;/p&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
                         `
                     }
                 ]
@@ -384,28 +412,33 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div>
-                            <div> <label><strong>Mô tả tóm tắt học phần (tiếng
-                                Anh)</strong>
-                                (*)</label>
-                            </div>
-                            <p><strong>Objectives:</strong>
-                                The course provides students with the necessary knowledge to build and develop online
-                                applications and services on the web environment. After completing this couse, students are
-                                able
-                                to:
-                                <ul>
-                                    <li>Use a programming language such as JSP, PHP to develop web applications for different
-                                        areas
-                                        such as content management system (CMS), portal, or online applications (eCommerce,
-                                        eLearning,
-                                        eGoverment, ...)</li>
-                                    <li>Understand the popular web technologies, platforms, frameworks.</li>
-                                </ul>
-                                In addition, the course also provides students with skills of teamwork and presentation, and
-                                attitudes needed to work and apply the techniques in software projects and companies in the
-                                future.</p>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div&gt;</div>
+  <div class="ql-code-block">                            &lt;div&gt; &lt;label&gt;&lt;strong&gt;Mô tả tóm tắt học phần (tiếng</div>
+  <div class="ql-code-block">                                Anh)&lt;/strong&gt;</div>
+  <div class="ql-code-block">                                (*)&lt;/label&gt;</div>
+  <div class="ql-code-block">                            &lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;p&gt;&lt;strong&gt;Objectives:&lt;/strong&gt;</div>
+  <div class="ql-code-block">                                The course provides students with the necessary knowledge to build and develop online</div>
+  <div class="ql-code-block">                                applications and services on the web environment. After completing this couse, students are</div>
+  <div class="ql-code-block">                                able</div>
+  <div class="ql-code-block">                                to:</div>
+  <div class="ql-code-block">                                &lt;ul&gt;</div>
+  <div class="ql-code-block">                                    &lt;li&gt;Use a programming language such as JSP, PHP to develop web applications for different</div>
+  <div class="ql-code-block">                                        areas</div>
+  <div class="ql-code-block">                                        such as content management system (CMS), portal, or online applications (eCommerce,</div>
+  <div class="ql-code-block">                                        eLearning,</div>
+  <div class="ql-code-block">                                        eGoverment, ...)&lt;/li&gt;</div>
+  <div class="ql-code-block">                                    &lt;li&gt;Understand the popular web technologies, platforms, frameworks.&lt;/li&gt;</div>
+  <div class="ql-code-block">                                &lt;/ul&gt;</div>
+  <div class="ql-code-block">                                In addition, the course also provides students with skills of teamwork and presentation, and</div>
+  <div class="ql-code-block">                                attitudes needed to work and apply the techniques in software projects and companies in the</div>
+  <div class="ql-code-block">                                future.&lt;/p&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -421,16 +454,21 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div>
-                            <div> <label><strong>Nội dung tóm tắt của học phần (tiếng
-                                Việt)</strong>
-                                (*)</label> </div>
-                            <div>
-                                <p>Internet, web, kiến trúc ứng dụng web,&nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax,
-                                    DOM, XML,
-                                    SOA, An toàn bảo mật web, v.v.</p>
-                            </div>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div&gt;</div>
+  <div class="ql-code-block">                            &lt;div&gt; &lt;label&gt;&lt;strong&gt;Nội dung tóm tắt của học phần (tiếng</div>
+  <div class="ql-code-block">                                Việt)&lt;/strong&gt;</div>
+  <div class="ql-code-block">                                (*)&lt;/label&gt; &lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div&gt;</div>
+  <div class="ql-code-block">                                &lt;p&gt;Internet, web, kiến trúc ứng dụng web,&amp;nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax,</div>
+  <div class="ql-code-block">                                    DOM, XML,</div>
+  <div class="ql-code-block">                                    SOA, An toàn bảo mật web, v.v.&lt;/p&gt;</div>
+  <div class="ql-code-block">                            &lt;/div&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -446,16 +484,21 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div>
-                            <div> <label><strong>Nội dung tóm tắt của học phần (tiếng
-                                Anh)</strong>
-                                (*)</label> </div>
-                            <div>
-                                <p>Internet, web, architecture of web
-                                    application,&nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax, DOM, XML, SOA,&nbsp;website
-                                    security</a>,
-                                etc.</p>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div&gt;</div>
+  <div class="ql-code-block">                            &lt;div&gt; &lt;label&gt;&lt;strong&gt;Nội dung tóm tắt của học phần (tiếng</div>
+  <div class="ql-code-block">                                Anh)&lt;/strong&gt;</div>
+  <div class="ql-code-block">                                (*)&lt;/label&gt; &lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div&gt;</div>
+  <div class="ql-code-block">                                &lt;p&gt;Internet, web, architecture of web</div>
+  <div class="ql-code-block">                                    application,&amp;nbsp; HTML, CSS, Javascript, PHP, JSP, Ajax, DOM, XML, SOA,&amp;nbsp;website</div>
+  <div class="ql-code-block">                                    security&lt;/a&gt;,</div>
+  <div class="ql-code-block">                                etc.&lt;/p&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -471,9 +514,14 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div style="flex: 2; margin-right: 30px;">
-                            <p>Sách Web Technologies: HTML, Javascript, PHP, Java, Jsp, XML and Ajax, Black Book</p>
-                        </div>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div style="flex: 2; margin-right: 30px;"&gt;</div>
+  <div class="ql-code-block">                            &lt;p&gt;Sách Web Technologies: HTML, Javascript, PHP, Java, Jsp, XML and Ajax, Black Book&lt;/p&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     },
                     {
@@ -481,15 +529,20 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <a href="https://www.amazon.com/Web-Technologies-HTML-Javascript-Black/dp/8177229974"
-                            target="_blank" style="flex: 1;margin-top: 20px;">
-                            <div class="FRB" style="width: 100%;">
-                                <img class="DRB" src="https://m.media-amazon.com/images/I/71t58FV+qFL._SY466_.jpg"
-                                    style="width: 100%;">
-                                    <div class="ERB" style="width: 100%;color: blue" title="">Web Technologies: HTML,
-                                        Javascript, PHP, Java, Jsp, XML and Ajax, Black Book</div>
-                            </div>
-                        </a>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;a href="https://www.amazon.com/Web-Technologies-HTML-Javascript-Black/dp/8177229974"</div>
+  <div class="ql-code-block">                            target="_blank" style="flex: 1;margin-top: 20px;"&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="FRB" style="width: 100%;"&gt;</div>
+  <div class="ql-code-block">                                &lt;img class="DRB" src="https://m.media-amazon.com/images/I/71t58FV+qFL._SY466_.jpg"</div>
+  <div class="ql-code-block">                                    style="width: 100%;"&gt;</div>
+  <div class="ql-code-block">                                    &lt;div class="ERB" style="width: 100%;color: blue" title=""&gt;Web Technologies: HTML,</div>
+  <div class="ql-code-block">                                        Javascript, PHP, Java, Jsp, XML and Ajax, Black Book&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;/div&gt;</div>
+  <div class="ql-code-block">                        &lt;/a&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -511,19 +564,24 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>HTML, CSS, JavaScript</strong>: Các công nghệ cơ bản để xây dựng cấu trúc và giao diện người
-                                dùng.
-                            </li>
-                            <li><strong>ReactJS</strong>: Thư viện JavaScript để xây dựng giao diện người dùng động.</li>
-                            <li><strong>Angular</strong>: Framework JavaScript mạnh mẽ cho các ứng dụng Web quy mô lớn.</li>
-                            <li><strong>Vue.js</strong>: Framework linh hoạt giúp phát triển giao diện người dùng hiệu quả.</li>
-                            <li><strong>CSS Preprocessors (SASS, LESS)</strong>: Giúp cải thiện mã CSS với các tính năng như biến và
-                                hàm.
-                            </li>
-                            <li><strong>Responsive Design</strong>: Thiết kế giao diện phù hợp với mọi kích thước màn hình (sử dụng
-                                Bootstrap, Tailwind CSS).</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;HTML, CSS, JavaScript&lt;/strong&gt;: Các công nghệ cơ bản để xây dựng cấu trúc và giao diện người</div>
+  <div class="ql-code-block">                                dùng.</div>
+  <div class="ql-code-block">                            &lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;ReactJS&lt;/strong&gt;: Thư viện JavaScript để xây dựng giao diện người dùng động.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Angular&lt;/strong&gt;: Framework JavaScript mạnh mẽ cho các ứng dụng Web quy mô lớn.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Vue.js&lt;/strong&gt;: Framework linh hoạt giúp phát triển giao diện người dùng hiệu quả.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;CSS Preprocessors (SASS, LESS)&lt;/strong&gt;: Giúp cải thiện mã CSS với các tính năng như biến và</div>
+  <div class="ql-code-block">                                hàm.</div>
+  <div class="ql-code-block">                            &lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Responsive Design&lt;/strong&gt;: Thiết kế giao diện phù hợp với mọi kích thước màn hình (sử dụng</div>
+  <div class="ql-code-block">                                Bootstrap, Tailwind CSS).&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -539,15 +597,20 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>Node.js</strong>: Môi trường runtime JavaScript hiệu quả cho ứng dụng Web.</li>
-                            <li><strong>Express.js</strong>: Framework giúp xây dựng API và xử lý các yêu cầu HTTP nhanh chóng.</li>
-                            <li><strong>Django (Python)</strong>: Framework Python phù hợp cho các ứng dụng Web cần bảo mật cao.</li>
-                            <li><strong>Ruby on Rails</strong>: Framework giúp phát triển ứng dụng Web nhanh chóng và dễ dàng bảo trì.
-                            </li>
-                            <li><strong>Java Spring Boot</strong>: Framework mạnh mẽ cho ứng dụng Web Java với khả năng mở rộng cao.
-                            </li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt;: Môi trường runtime JavaScript hiệu quả cho ứng dụng Web.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Express.js&lt;/strong&gt;: Framework giúp xây dựng API và xử lý các yêu cầu HTTP nhanh chóng.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Django (Python)&lt;/strong&gt;: Framework Python phù hợp cho các ứng dụng Web cần bảo mật cao.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Ruby on Rails&lt;/strong&gt;: Framework giúp phát triển ứng dụng Web nhanh chóng và dễ dàng bảo trì.</div>
+  <div class="ql-code-block">                            &lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Java Spring Boot&lt;/strong&gt;: Framework mạnh mẽ cho ứng dụng Web Java với khả năng mở rộng cao.</div>
+  <div class="ql-code-block">                            &lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -563,12 +626,17 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>MySQL</strong>: Cơ sở dữ liệu quan hệ phổ biến.</li>
-                            <li><strong>PostgreSQL</strong>: Cơ sở dữ liệu mạnh mẽ hỗ trợ truy vấn phức tạp.</li>
-                            <li><strong>MongoDB</strong>: Cơ sở dữ liệu NoSQL linh hoạt cho dữ liệu phi cấu trúc.</li>
-                            <li><strong>Cassandra</strong>: Cơ sở dữ liệu NoSQL phân tán phù hợp cho dữ liệu lớn.</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;MySQL&lt;/strong&gt;: Cơ sở dữ liệu quan hệ phổ biến.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt;: Cơ sở dữ liệu mạnh mẽ hỗ trợ truy vấn phức tạp.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;MongoDB&lt;/strong&gt;: Cơ sở dữ liệu NoSQL linh hoạt cho dữ liệu phi cấu trúc.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Cassandra&lt;/strong&gt;: Cơ sở dữ liệu NoSQL phân tán phù hợp cho dữ liệu lớn.&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -584,11 +652,16 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>RESTful APIs</strong>: Phương thức phổ biến để giao tiếp giữa các hệ thống qua HTTP.</li>
-                            <li><strong>GraphQL</strong>: Công nghệ API mạnh mẽ giúp lấy dữ liệu theo yêu cầu.</li>
-                            <li><strong>WebSockets</strong>: Giải pháp cho các ứng dụng thời gian thực.</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;RESTful APIs&lt;/strong&gt;: Phương thức phổ biến để giao tiếp giữa các hệ thống qua HTTP.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;GraphQL&lt;/strong&gt;: Công nghệ API mạnh mẽ giúp lấy dữ liệu theo yêu cầu.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;WebSockets&lt;/strong&gt;: Giải pháp cho các ứng dụng thời gian thực.&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -604,15 +677,20 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>Docker</strong>: Giải pháp đóng gói ứng dụng và môi trường vào container.</li>
-                            <li><strong>CI/CD</strong>: Tự động hóa quy trình kiểm thử và triển khai (Jenkins, GitLab CI, GitHub
-                                Actions).
-                            </li>
-                            <li><strong>AWS, Azure, Google Cloud</strong>: Các dịch vụ đám mây linh hoạt cho phát triển và triển khai
-                                ứng
-                                dụng Web.</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Docker&lt;/strong&gt;: Giải pháp đóng gói ứng dụng và môi trường vào container.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;CI/CD&lt;/strong&gt;: Tự động hóa quy trình kiểm thử và triển khai (Jenkins, GitLab CI, GitHub</div>
+  <div class="ql-code-block">                                Actions).</div>
+  <div class="ql-code-block">                            &lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;AWS, Azure, Google Cloud&lt;/strong&gt;: Các dịch vụ đám mây linh hoạt cho phát triển và triển khai</div>
+  <div class="ql-code-block">                                ứng</div>
+  <div class="ql-code-block">                                dụng Web.&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -628,11 +706,16 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>OAuth2 & JWT</strong>: Cơ chế xác thực và phân quyền người dùng an toàn.</li>
-                            <li><strong>HTTPS</strong>: Đảm bảo giao tiếp an toàn qua mã hóa SSL/TLS.</li>
-                            <li><strong>Helmet.js</strong>: Thư viện Node.js tăng cường bảo mật HTTP header.</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;OAuth2 &amp; JWT&lt;/strong&gt;: Cơ chế xác thực và phân quyền người dùng an toàn.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;HTTPS&lt;/strong&gt;: Đảm bảo giao tiếp an toàn qua mã hóa SSL/TLS.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Helmet.js&lt;/strong&gt;: Thư viện Node.js tăng cường bảo mật HTTP header.&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -648,12 +731,17 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>Jest</strong>: Công cụ kiểm thử JavaScript, thường dùng với React và Node.js.</li>
-                            <li><strong>Mocha & Chai</strong>: Framework kiểm thử cho Node.js.</li>
-                            <li><strong>Cypress</strong>: Công cụ kiểm thử tích hợp mạnh mẽ cho các ứng dụng Web.</li>
-                            <li><strong>Postman</strong>: Công cụ kiểm thử API và làm việc với RESTful API.</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Jest&lt;/strong&gt;: Công cụ kiểm thử JavaScript, thường dùng với React và Node.js.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Mocha &amp; Chai&lt;/strong&gt;: Framework kiểm thử cho Node.js.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Cypress&lt;/strong&gt;: Công cụ kiểm thử tích hợp mạnh mẽ cho các ứng dụng Web.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Postman&lt;/strong&gt;: Công cụ kiểm thử API và làm việc với RESTful API.&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -669,15 +757,20 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>Lazy Loading</strong>: Tải tài nguyên theo yêu cầu để cải thiện tốc độ tải trang.</li>
-                            <li><strong>CDN (Content Delivery Network)</strong>: Mạng phân phối nội dung giúp giảm độ trễ và cải thiện
-                                tốc
-                                độ.</li>
-                            <li><strong>Caching</strong>: Sử dụng Redis hoặc Memcached để lưu trữ dữ liệu tạm thời và giảm tải cho
-                                server.
-                            </li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Lazy Loading&lt;/strong&gt;: Tải tài nguyên theo yêu cầu để cải thiện tốc độ tải trang.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;CDN (Content Delivery Network)&lt;/strong&gt;: Mạng phân phối nội dung giúp giảm độ trễ và cải thiện</div>
+  <div class="ql-code-block">                                tốc</div>
+  <div class="ql-code-block">                                độ.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Caching&lt;/strong&gt;: Sử dụng Redis hoặc Memcached để lưu trữ dữ liệu tạm thời và giảm tải cho</div>
+  <div class="ql-code-block">                                server.</div>
+  <div class="ql-code-block">                            &lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -693,12 +786,17 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <ul>
-                            <li><strong>Firebase Authentication</strong>: Dịch vụ đăng nhập thông qua Google, Facebook,
-                                email/password.
-                            </li>
-                            <li><strong>Auth0</strong>: Dịch vụ bảo mật giúp quản lý xác thực và phân quyền người dùng dễ dàng.</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Firebase Authentication&lt;/strong&gt;: Dịch vụ đăng nhập thông qua Google, Facebook,</div>
+  <div class="ql-code-block">                                email/password.</div>
+  <div class="ql-code-block">                            &lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;&lt;strong&gt;Auth0&lt;/strong&gt;: Dịch vụ bảo mật giúp quản lý xác thực và phân quyền người dùng dễ dàng.&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     },
                     {
@@ -706,13 +804,18 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">
-                            <img width="100%"
-                            src="https://www.shutterstock.com/shutterstock/photos/1854050815/display_1500/stock-vector-abstract-technology-horizontal-motion-style-concept-particle-connection-background-design-with-red-1854050815.jpg"
-                            alt="">
-                            <p style="color: blue;">
-                            Các công nghệ web</p>
-                        </a>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank"&gt;</div>
+  <div class="ql-code-block">                            &lt;img width="100%"</div>
+  <div class="ql-code-block">                            src="https://www.shutterstock.com/shutterstock/photos/1854050815/display_1500/stock-vector-abstract-technology-horizontal-motion-style-concept-particle-connection-background-design-with-red-1854050815.jpg"</div>
+  <div class="ql-code-block">                            alt=""&gt;</div>
+  <div class="ql-code-block">                            &lt;p style="color: blue;"&gt;</div>
+  <div class="ql-code-block">                            Các công nghệ web&lt;/p&gt;</div>
+  <div class="ql-code-block">                        &lt;/a&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -734,9 +837,14 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div class="flex justify-center">
-                            <img src="./assets/ava.jpg" alt="Student Photo" class="profile-photo">
-                        </div>
+                       <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div class="flex justify-center"&gt;</div>
+  <div class="ql-code-block">                            &lt;img src="./assets/ava.jpg" alt="Student Photo" class="profile-photo"&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     },
                     {
@@ -744,16 +852,21 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <div>
-                            <div class="details"><span>Họ và tên:</span> Nguyễn Tú Anh</div>
-                            <div class="details"><span>Năm vào trường:</span> 2022</div>
-                            <div class="details"><span>Chương trình:</span> Kỹ thuật máy tính</div>
-                            <div class="details"><span>MSSV:</span> 20225119</div>
-                            <div class="details"><span>Giới tính:</span> Nam</div>
-                            <div class="details"><span>Lớp:</span> Kỹ thuật máy tính - 07</div>
-                            <div class="details"><span>Khóa học:</span> 67</div>
-                            <div class="details"><span>Email:</span> Anh.nt225119@sis.hust.edu.vn</div>
-                        </div>
+                       <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;Họ và tên:&lt;/span&gt; Nguyễn Tú Anh&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;Năm vào trường:&lt;/span&gt; 2022&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;Chương trình:&lt;/span&gt; Kỹ thuật máy tính&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;MSSV:&lt;/span&gt; 20225119&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;Giới tính:&lt;/span&gt; Nam&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;Lớp:&lt;/span&gt; Kỹ thuật máy tính - 07&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;Khóa học:&lt;/span&gt; 67&lt;/div&gt;</div>
+  <div class="ql-code-block">                            &lt;div class="details"&gt;&lt;span&gt;Email:&lt;/span&gt; Anh.nt225119@sis.hust.edu.vn&lt;/div&gt;</div>
+  <div class="ql-code-block">                        &lt;/div&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     },
                     {
@@ -761,21 +874,26 @@ const initialData = [
                         rows: 1,
                         cols: 2,
                         html: `
-                        <h5>Kỹ năng</h5>
-                        <table class="table-info">
-                            <tr>
-                                <th>Ngôn ngữ</th>
-                                <td>HTML, CSS, JavaScript, Java, Python</td>
-                            </tr>
-                            <tr>
-                                <th>Frameworks</th>
-                                <td>ReactJS, NodeJS, ExpressJS</td>
-                            </tr>
-                            <tr>
-                                <th>Cơ sở dữ liệu</th>
-                                <td>MySQL, SQL Server, MongoDB</td>
-                            </tr>
-                        </table>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;h5&gt;Kỹ năng&lt;/h5&gt;</div>
+  <div class="ql-code-block">                        &lt;table class="table-info"&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Ngôn ngữ&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;HTML, CSS, JavaScript, Java, Python&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Frameworks&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;ReactJS, NodeJS, ExpressJS&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                            &lt;tr&gt;</div>
+  <div class="ql-code-block">                                &lt;th&gt;Cơ sở dữ liệu&lt;/th&gt;</div>
+  <div class="ql-code-block">                                &lt;td&gt;MySQL, SQL Server, MongoDB&lt;/td&gt;</div>
+  <div class="ql-code-block">                            &lt;/tr&gt;</div>
+  <div class="ql-code-block">                        &lt;/table&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
@@ -791,12 +909,17 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <h5>Tool gợi ý Deck cho Deck-Building game</h5>
-                        <ul>
-                            <li>Sử dụng ReactJS để phát triển Frontend và ExpressJS để phát triển Backend</li>
-                            <li>Sử dụng Pandas và Numpy để xây dựng hệ gợi ý bộ bài.</li>
-                            <li>Xây dựng Python APIs với FastAPI.</li>
-                        </ul>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;h5&gt;Tool gợi ý Deck cho Deck-Building game&lt;/h5&gt;</div>
+  <div class="ql-code-block">                        &lt;ul&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;Sử dụng ReactJS để phát triển Frontend và ExpressJS để phát triển Backend&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;Sử dụng Pandas và Numpy để xây dựng hệ gợi ý bộ bài.&lt;/li&gt;</div>
+  <div class="ql-code-block">                            &lt;li&gt;Xây dựng Python APIs với FastAPI.&lt;/li&gt;</div>
+  <div class="ql-code-block">                        &lt;/ul&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     },
                     {
@@ -804,8 +927,13 @@ const initialData = [
                         rows: 1,
                         cols: 1,
                         html: `
-                        <h5>Ứng dụng quản lý chung cư</h5>
-                        <p>Phát triển Backend với REST APIs sử dụng MySQL, ExpressJS và NodeJS</p>
+                        <div class="ql-code-block-container" spellcheck="false">
+  <div class="ql-code-block"><br></div>
+  <div class="ql-code-block">                        &lt;h5&gt;Ứng dụng quản lý chung cư&lt;/h5&gt;</div>
+  <div class="ql-code-block">                        &lt;p&gt;Phát triển Backend với REST APIs sử dụng MySQL, ExpressJS và NodeJS&lt;/p&gt;</div>
+</div>
+<p>                        </p>
+
                         `
                     }
                 ]
